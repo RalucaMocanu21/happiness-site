@@ -1108,23 +1108,18 @@ a:focus {
   }
 }
 
-/* =========================
-   MOBILE / TABLET <= 768px
-   ========================= */
 @media (max-width: 768px) {
-  /* HERO */
   .hero-flat {
     padding-left: 0;
     padding-right: 0;
   }
+}
 
   .hero-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-    width: 100%;
-    max-width: 100%;
   }
 
   .hero-text {
@@ -1143,67 +1138,19 @@ a:focus {
     height: auto;
   }
 
-  /* =========================
-     FLIP CARDS: păstrate pe mobile
-     (tap = :active, plus focus)
-     ========================= */
 
-  /* ABOUT flip: pe mobile nu ai tabindex în HTML,
-     deci :focus-within nu prea se prinde -> folosim :active */
-  .about-flip-card:active .about-flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  /* PERSPECTIVES deja au tabindex=0, deci merg și focus/active */
-  .persp-flip-card:active .persp-flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  /* Înălțimi mai ok pe mobile ca să nu taie textul */
-  .about-flip-card-inner {
-    height: 520px;
-  }
-
+@media (max-width: 768px) {
   .persp-flip-card-inner {
-    height: 560px; /* înlocuiește vechiul 460px */
-  }
-
-  /* Back side: scroll ok dacă textul e mai lung */
-  .about-flip-card-back,
-  .persp-flip-card-back {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* =========================
-     THREE THINGS: fix pentru cuvinte rupte urât
-     ========================= */
-  .highlight-emoji-list li {
-    /* păstrează layout frumos cu emoji + text */
-    display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
-
-    /* IMPORTANT: oprește ruperea agresivă */
-    word-break: normal;
-    overflow-wrap: break-word;   /* nu "anywhere" */
-    hyphens: none;               /* oprește re-me-mb-er-ing */
-    white-space: normal;
-  }
-
-  .highlight-emoji-list .emoji {
-    flex: 0 0 auto;
+    height: 460px;
   }
 }
 
-/* MOBILE MIC <= 600px */
 @media (max-width: 600px) {
   .gallery-item img {
-    height: 450px;
-    object-position: center;
+    height: 450px;        
+    object-position: center; 
   }
 }
-
 
 
 
