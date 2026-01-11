@@ -1168,43 +1168,23 @@ a:focus {
   }
 
 
-/* ============================================
-   🔥 MOBILE RESET COMPLET — REPARĂ TOT
-   ============================================ */
+/* ================================
+   FINAL MOBILE RESPONSIVE FIX
+   ================================ */
 @media (max-width: 768px) {
 
+  /* OPRIM OVERSCROLL ORIZONTAL */
   html, body {
-    width: 100% !important;
-    max-width: 100% !important;
     overflow-x: hidden !important;
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  /* 🔶 REPARĂ problema principală: secțiunile tăiate */
-  .section,
-  .hero,
-  .hero-flat,
-  .highlight-box,
-  .highlight-long,
-  .about-flip-card,
-  .persp-flip-card,
-  .exp-card,
-  .gallery-grid,
-  .reflection-card,
-  .song-card,
-  .footer-wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  /* 🔶 HERO background fix */
+  /* ---------------- HERO ---------------- */
   .hero-flat {
+    width: 100% !important;
+    padding: 2.5rem 1rem !important;
+    margin: 0 !important;
     border-radius: 0 !important;
     background: linear-gradient(
       180deg,
@@ -1212,30 +1192,40 @@ a:focus {
       #ffe5f0 50%,
       #e3eeff 100%
     ) !important;
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
   }
 
   .hero-container {
-    display: flex;
+    display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
-    max-width: 100% !important;
     gap: 1.8rem !important;
+    padding: 0 !important;
     margin: 0 !important;
   }
 
   .hero-image img {
-    width: 100% !important;
+    width: 90% !important;
     max-width: 320px !important;
     height: auto !important;
     margin: 0 auto !important;
   }
 
-  /* 🔶 ABOUT cards fix */
+  .hero-text h1 {
+    font-size: 2.4rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-tagline,
+  .hero-intro {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  /* ---------------- ABOUT FLIP CARDS ---------------- */
+  .about-flip-card,
   .about-flip-card-inner {
-    height: auto !important;
-    min-height: 350px !important;
+    width: 100% !important;
+    min-height: auto !important;
   }
 
   .about-flip-card-front,
@@ -1243,22 +1233,26 @@ a:focus {
     padding: 1.2rem !important;
   }
 
-  /* 🔶 LISTA CU 3 INGREDIENTE – fix pentru text tăiat */
+  /* ---------------- HIGHLIGHT LIST ---------------- */
   .highlight-emoji-list li {
     display: grid !important;
-    grid-template-columns: 2rem 1fr !important;
+    grid-template-columns: 1.8rem 1fr !important;
     gap: 0.6rem !important;
     align-items: start;
   }
 
-  /* 🔶 PERSPECTIVES */
+  /* ---------------- PERSPECTIVES ---------------- */
   .persp-flip-grid {
     display: flex !important;
     flex-direction: column !important;
     gap: 1.4rem !important;
   }
 
-  /* 🔶 GALLERY fix */
+  .persp-flip-card-inner {
+    min-height: 350px !important;
+  }
+
+  /* ---------------- GALLERY ---------------- */
   .gallery-grid {
     grid-template-columns: 1fr !important;
     gap: 1.6rem !important;
@@ -1274,21 +1268,24 @@ a:focus {
     height: auto !important;
   }
 
-  /* 🔶 EXPERIMENT CARDS FIX */
+  /* ---------------- EXPERIMENTS ---------------- */
   .exp-card {
+    width: 100% !important;
     padding: 1.4rem !important;
   }
 
-  /* 🔶 REFLECTION CARDS */
+  /* ---------------- REFLECTION ---------------- */
   .reflection-card {
+    width: 100% !important;
     padding: 1.4rem !important;
   }
 
-  /* 🔶 FOOTER FIX */
+  /* ---------------- FOOTER ---------------- */
   .footer-content {
     flex-direction: column !important;
     gap: 2rem !important;
     width: 100% !important;
   }
 }
+
 
