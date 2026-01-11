@@ -1168,18 +1168,5 @@ a:focus {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-flat {
-    width: 100vw;
-    margin: 0;
-    padding: 3rem 1rem;
-    background: linear-gradient(
-      180deg,
-      #fff3c4 0%,
-      #ffe5f0 50%,
-      #e3eeff 100%
-    );
-  }
-}
 
 
