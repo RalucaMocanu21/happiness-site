@@ -1166,6 +1166,160 @@ a:focus {
     height: 450px;        
     object-position: center; 
   }
+
+
+
+  /* ============================================
+   MOBILE FULL RESPONSIVE FIX – < 768px
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* PAGE SPACING */
+  body {
+    padding: 0;
+    overflow-x: hidden !important;
+  }
+
+  .section {
+    padding: 2rem 1.2rem !important;
+    max-width: 100% !important;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero-flat {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 2.5rem 1.2rem !important;
+    border-radius: 0 !important;
+    background: linear-gradient(
+      180deg,
+      #fff3c4 0%,
+      #ffe5f0 50%,
+      #e3eeff 100%
+    );
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.8rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.4rem !important;
+    line-height: 1.2;
+  }
+
+  .hero-tagline,
+  .hero-intro {
+    font-size: 1rem !important;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+  }
+
+  /* ---------- ABOUT FLIP-CARDS ---------- */
+  .about-flip-card {
+    margin: 1.5rem 0;
+  }
+
+  .about-flip-card-inner {
+    height: auto !important;
+    min-height: 360px;
+  }
+
+  .about-flip-card-front,
+  .about-flip-card-back {
+    padding: 1.5rem !important;
+  }
+
+  .about-flip-card-back p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- HIGHLIGHT BOXES ---------- */
+  .highlight-long,
+  .highlight-box {
+    padding: 1.6rem !important;
+    margin: 1.5rem 0 !important;
+  }
+
+  /* ---------- PERSPECTIVES FLIP-GRID ---------- */
+  .persp-flip-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .persp-flip-card-inner {
+    height: auto !important;
+    min-height: 420px;
+  }
+
+  /* ---------- EXPERIMENT CARDS ---------- */
+  .exp-card {
+    padding: 1.6rem !important;
+  }
+
+  .exp-card h3 {
+    font-size: 1.3rem;
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.8rem !important;
+  }
+
+  .gallery-item img {
+    height: auto !important;
+  }
+
+  /* ---------- SONG CARD ---------- */
+  .song-card {
+    padding: 1.8rem 1.2rem !important;
+    margin-top: 2rem;
+  }
+
+  .song-image-wrapper img {
+    height: auto !important;
+    max-height: 260px;
+  }
+
+  /* ---------- REFLECTION CARDS ---------- */
+  .reflection-card {
+    padding: 1.6rem !important;
+  }
+
+  .reflection-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .pastel-list li {
+    font-size: 1rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-content {
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+  }
+}
+
 }
 
 
