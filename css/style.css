@@ -1169,21 +1169,42 @@ a:focus {
 
 
 /* ============================================
-   🔥 MOBILE FIX COMPLET – Pentru ecrane 320px
+   🔥 MOBILE RESET COMPLET — REPARĂ TOT
    ============================================ */
 @media (max-width: 768px) {
 
   html, body {
     width: 100% !important;
+    max-width: 100% !important;
     overflow-x: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
-  /* ---------------- HERO ---------------- */
-  .hero-flat {
+  /* 🔶 REPARĂ problema principală: secțiunile tăiate */
+  .section,
+  .hero,
+  .hero-flat,
+  .highlight-box,
+  .highlight-long,
+  .about-flip-card,
+  .persp-flip-card,
+  .exp-card,
+  .gallery-grid,
+  .reflection-card,
+  .song-card,
+  .footer-wrapper {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 2.5rem 1.2rem !important;
-    margin: 0 !important;
+    box-sizing: border-box !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 🔶 HERO background fix */
+  .hero-flat {
     border-radius: 0 !important;
     background: linear-gradient(
       180deg,
@@ -1191,112 +1212,83 @@ a:focus {
       #ffe5f0 50%,
       #e3eeff 100%
     ) !important;
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
 
   .hero-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding: 0 !important;
+    gap: 1.8rem !important;
     margin: 0 !important;
-    gap: 1.6rem;
-  }
-
-  .hero-text {
-    width: 100% !important;
-    padding-right: 0 !important;
-  }
-
-  .hero-text h1 {
-    font-size: 2.4rem !important;
-    line-height: 1.2;
-    word-wrap: break-word;
-  }
-
-  .hero-image {
-    width: 100% !important;
-    display: flex;
-    justify-content: center;
   }
 
   .hero-image img {
-    width: 90% !important;
-    max-width: 330px;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  /* ---------------- ABOUT FLIP CARDS ---------------- */
-  .about-flip-card {
     width: 100% !important;
-    margin: 1.5rem 0;
+    max-width: 320px !important;
+    height: auto !important;
+    margin: 0 auto !important;
   }
 
+  /* 🔶 ABOUT cards fix */
   .about-flip-card-inner {
     height: auto !important;
-    min-height: 340px !important;
+    min-height: 350px !important;
   }
 
   .about-flip-card-front,
   .about-flip-card-back {
-    padding: 1.4rem !important;
+    padding: 1.2rem !important;
   }
 
-  /* ---------------- HIGHLIGHT BOX ---------------- */
-  .highlight-long,
-  .highlight-box {
-    width: 100% !important;
-    padding: 1.6rem !important;
-    margin: 1.5rem 0 !important;
-  }
-
+  /* 🔶 LISTA CU 3 INGREDIENTE – fix pentru text tăiat */
   .highlight-emoji-list li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.6rem;
+    display: grid !important;
+    grid-template-columns: 2rem 1fr !important;
+    gap: 0.6rem !important;
+    align-items: start;
   }
 
-  /* ---------------- PERSPECTIVES ---------------- */
+  /* 🔶 PERSPECTIVES */
   .persp-flip-grid {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.5rem !important;
+    gap: 1.4rem !important;
   }
 
-  .persp-flip-card-inner {
-    height: auto !important;
-    min-height: 420px !important;
-  }
-
-  /* ---------------- GALLERY ---------------- */
+  /* 🔶 GALLERY fix */
   .gallery-grid {
     grid-template-columns: 1fr !important;
     gap: 1.6rem !important;
   }
 
+  .gallery-item {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   .gallery-item img {
+    width: 100% !important;
     height: auto !important;
-    width: 100% !important;
-    object-fit: cover;
   }
 
-  /* ---------------- EXPERIMENT CARDS ---------------- */
+  /* 🔶 EXPERIMENT CARDS FIX */
   .exp-card {
-    width: 100% !important;
-    padding: 1.6rem !important;
-  }
-
-  /* ---------------- REFLECTION ---------------- */
-  .reflection-card {
-    width: 100% !important;
     padding: 1.4rem !important;
   }
 
-  /* ---------------- FOOTER ---------------- */
+  /* 🔶 REFLECTION CARDS */
+  .reflection-card {
+    padding: 1.4rem !important;
+  }
+
+  /* 🔶 FOOTER FIX */
   .footer-content {
     flex-direction: column !important;
     gap: 2rem !important;
-    text-align: left !important;
+    width: 100% !important;
   }
 }
+
