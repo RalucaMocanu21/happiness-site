@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
   --color-bg: #fff9fb;
   --color-bg-alt: #ffffff;
@@ -1109,6 +1113,8 @@ a:focus {
     display: flex;
     flex-direction: column; /* MUTĂ imaginea sub text */
     align-items: center;
+    max-width: 100%;
+    width: 100%;
     gap: 2rem;
   }
 
@@ -1143,16 +1149,19 @@ a:focus {
     object-position: center; 
   }
 }
+
 @media (max-width: 768px) {
   .hero-flat {
+    width: 100vw;
+    margin: 0;
+    padding: 3rem 1rem;
     background: linear-gradient(
-      180deg,   
+      180deg,
       #fff3c4 0%,
       #ffe5f0 50%,
       #e3eeff 100%
     );
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 }
+
 
