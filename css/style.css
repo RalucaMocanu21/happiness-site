@@ -1143,4 +1143,16 @@ a:focus {
     object-position: center; 
   }
 }
+@media (max-width: 768px) {
+  .hero-flat {
+    background: linear-gradient(
+      180deg,   
+      #fff3c4 0%,
+      #ffe5f0 50%,
+      #e3eeff 100%
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
 
