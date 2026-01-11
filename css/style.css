@@ -1255,21 +1255,37 @@ a:focus {
   }
 }
 
-.highlight-long,
-.highlight-long * {
-  word-break: normal !important;
-  overflow-wrap: normal !important;  /* NU anywhere */
-  hyphens: none !important;
+/* FIX FINAL (CSS-only) pentru "Three things..." */
+.highlight-emoji-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .highlight-emoji-list li {
-  max-width: 100%;
-  white-space: normal;
+  position: relative;
+  padding-left: 2.2rem;   
+  margin-bottom: 0.9rem;
+
+
+  display: block !important;
+
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+
+  line-height: 1.55;
 }
 
-.highlight-emoji-list li strong {
-  display: inline !important;
+.highlight-emoji-list li .emoji {
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1.6rem;
+  text-align: center;
 }
+
 
 
 
