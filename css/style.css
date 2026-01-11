@@ -1153,5 +1153,37 @@ a:focus {
 }
 
 
+@media (max-width: 768px) {
+  .highlight-emoji-list li {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    column-gap: 0.85rem;
+    align-items: start;
 
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+  }
+
+  .highlight-emoji-list .emoji {
+    margin-top: 0.15rem;
+  }
+}
+
+
+.about-flip-card-back,
+.persp-flip-card-back {
+  justify-content: flex-start;   /* în loc de center */
+  align-items: stretch;
+  padding-top: 1.6rem;           /* puțin spațiu sus */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-item img[alt*="happy mind happy life"] {
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #ffffff;           /* ca să nu arate ciudat când e contain */
+}
 
