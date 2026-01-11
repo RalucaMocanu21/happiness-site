@@ -362,8 +362,11 @@ a:focus {
     #ffe5f0 40%,
     #e3eeff 100%
   );
-  padding: 5rem 2rem;
-  border-radius: 0;
+  
+  width: 100vw;               
+  margin-left: 50%;           
+  transform: translateX(-50%);
+  border-radius: 0 !important;
 }
 
 .hero-container {
@@ -1102,8 +1105,10 @@ a:focus {
 
 @media (max-width: 768px) {
   .hero-flat {
-    padding: 3.5rem 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
   }
+}
 
   .hero-container {
     display: flex;
