@@ -1104,15 +1104,17 @@ a:focus {
 }
 
 @media (max-width: 768px) {
-  .hero-flat {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
+   .hero-flat {
+    padding-left: 0;
+    padding-right: 0;
   }
-  
+}
+
   .hero-container {
-    max-width: 100%;
-    padding: 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   .hero-text {
