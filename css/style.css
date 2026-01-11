@@ -1104,14 +1104,12 @@ a:focus {
 }
 
 @media (max-width: 768px) {
-  .hero,
   .hero-flat {
     width: 100%;
     max-width: 100%;
     border-radius: 0;
   }
-
-  .hero-inner,
+  
   .hero-container {
     max-width: 100%;
     padding: 0 1.2rem;
