@@ -1105,27 +1105,22 @@ a:focus {
 }
 
 @media (max-width: 768px) {
-  .hero-flat {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
   .hero-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* MUTĂ imaginea sub text */
+    align-items: center;
     gap: 2rem;
   }
 
   .hero-text {
-    max-width: 100%;
+    text-align: left;
+    width: 100%;
   }
 
   .hero-image {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* centrează imaginea */
   }
 
   .hero-image img {
