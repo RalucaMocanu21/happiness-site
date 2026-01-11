@@ -1168,159 +1168,135 @@ a:focus {
   }
 
 
-
-  /* ============================================
-   MOBILE FULL RESPONSIVE FIX – < 768px
+/* ============================================
+   🔥 MOBILE FIX COMPLET – Pentru ecrane 320px
    ============================================ */
 @media (max-width: 768px) {
 
-  /* PAGE SPACING */
-  body {
-    padding: 0;
+  html, body {
+    width: 100% !important;
     overflow-x: hidden !important;
   }
 
-  .section {
-    padding: 2rem 1.2rem !important;
-    max-width: 100% !important;
-  }
-
-  /* ---------- HERO ---------- */
+  /* ---------------- HERO ---------------- */
   .hero-flat {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 2.5rem 1.2rem !important;
+    margin: 0 !important;
     border-radius: 0 !important;
     background: linear-gradient(
       180deg,
       #fff3c4 0%,
       #ffe5f0 50%,
       #e3eeff 100%
-    );
+    ) !important;
   }
 
   .hero-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    gap: 1.8rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 1.6rem;
+  }
+
+  .hero-text {
+    width: 100% !important;
+    padding-right: 0 !important;
   }
 
   .hero-text h1 {
     font-size: 2.4rem !important;
     line-height: 1.2;
-  }
-
-  .hero-tagline,
-  .hero-intro {
-    font-size: 1rem !important;
-    max-width: 100%;
+    word-wrap: break-word;
   }
 
   .hero-image {
+    width: 100% !important;
     display: flex;
     justify-content: center;
-    width: 100%;
   }
 
   .hero-image img {
-    width: 100%;
+    width: 90% !important;
     max-width: 330px;
     height: auto;
+    margin: 0 auto;
   }
 
-  /* ---------- ABOUT FLIP-CARDS ---------- */
+  /* ---------------- ABOUT FLIP CARDS ---------------- */
   .about-flip-card {
+    width: 100% !important;
     margin: 1.5rem 0;
   }
 
   .about-flip-card-inner {
     height: auto !important;
-    min-height: 360px;
+    min-height: 340px !important;
   }
 
   .about-flip-card-front,
   .about-flip-card-back {
-    padding: 1.5rem !important;
+    padding: 1.4rem !important;
   }
 
-  .about-flip-card-back p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  /* ---------- HIGHLIGHT BOXES ---------- */
+  /* ---------------- HIGHLIGHT BOX ---------------- */
   .highlight-long,
   .highlight-box {
+    width: 100% !important;
     padding: 1.6rem !important;
     margin: 1.5rem 0 !important;
   }
 
-  /* ---------- PERSPECTIVES FLIP-GRID ---------- */
+  .highlight-emoji-list li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem;
+  }
+
+  /* ---------------- PERSPECTIVES ---------------- */
   .persp-flip-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
   }
 
   .persp-flip-card-inner {
     height: auto !important;
-    min-height: 420px;
+    min-height: 420px !important;
   }
 
-  /* ---------- EXPERIMENT CARDS ---------- */
-  .exp-card {
-    padding: 1.6rem !important;
-  }
-
-  .exp-card h3 {
-    font-size: 1.3rem;
-  }
-
-  /* ---------- GALLERY ---------- */
+  /* ---------------- GALLERY ---------------- */
   .gallery-grid {
     grid-template-columns: 1fr !important;
-    gap: 1.8rem !important;
+    gap: 1.6rem !important;
   }
 
   .gallery-item img {
     height: auto !important;
+    width: 100% !important;
+    object-fit: cover;
   }
 
-  /* ---------- SONG CARD ---------- */
-  .song-card {
-    padding: 1.8rem 1.2rem !important;
-    margin-top: 2rem;
-  }
-
-  .song-image-wrapper img {
-    height: auto !important;
-    max-height: 260px;
-  }
-
-  /* ---------- REFLECTION CARDS ---------- */
-  .reflection-card {
+  /* ---------------- EXPERIMENT CARDS ---------------- */
+  .exp-card {
+    width: 100% !important;
     padding: 1.6rem !important;
   }
 
-  .reflection-card h3 {
-    font-size: 1.35rem;
+  /* ---------------- REFLECTION ---------------- */
+  .reflection-card {
+    width: 100% !important;
+    padding: 1.4rem !important;
   }
 
-  .pastel-list li {
-    font-size: 1rem;
-  }
-
-  /* ---------- FOOTER ---------- */
+  /* ---------------- FOOTER ---------------- */
   .footer-content {
-    flex-direction: column;
-    text-align: left;
-    gap: 2rem;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    text-align: left !important;
   }
 }
-
-}
-
-
-
