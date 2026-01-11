@@ -1108,18 +1108,29 @@ a:focus {
   }
 }
 
+/* =========================
+   MOBILE / TABLET <= 768px
+   ========================= */
 @media (max-width: 768px) {
+
+  /* PREVINE overflow orizontal */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* ---------- HERO ---------- */
   .hero-flat {
     padding-left: 0;
     padding-right: 0;
   }
-}
 
   .hero-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-text {
@@ -1133,57 +1144,120 @@ a:focus {
   }
 
   .hero-image img {
-    width: 80%;
-    max-width: 320px;
+    width: min(92%, 360px);
     height: auto;
   }
 
-
-@media (max-width: 768px) {
-  .persp-flip-card-inner {
-    height: 460px;
+  /* ---------- ABOUT FLIP CARDS (cele 2 mari) ---------- */
+  .about-flip-card-inner {
+    height: auto;               /* important pe mobil */
+    min-height: 360px;
   }
-}
 
-@media (max-width: 600px) {
-  .gallery-item img {
-    height: 450px;        
-    object-position: center; 
+  .about-flip-card-front,
+  .about-flip-card-back {
+    padding: 1.25rem;
   }
-}
 
+  /* back side să înceapă de sus, nu centrat */
+  .about-flip-card-back {
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
-@media (max-width: 768px) {
+  /* ---------- THREE THINGS ---------- */
+  .highlight-long {
+    max-width: 100%;
+    padding: 1.4rem 1.1rem;
+    margin: 2rem auto;
+  }
+
+  .highlight-emoji-title h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .highlight-emoji-list {
+    padding: 0;
+    margin: 0;
+  }
+
   .highlight-emoji-list li {
     display: grid;
-    grid-template-columns: 2rem 1fr;
+    grid-template-columns: 2rem 1fr;   /* emoji | text */
     column-gap: 0.85rem;
+    row-gap: 0.2rem;
     align-items: start;
 
+    /* IMPORTANT: oprește “ruperi urâte” */
     white-space: normal;
     word-break: normal;
     overflow-wrap: break-word;
     hyphens: none;
+
+    font-size: 1.05rem;
+    line-height: 1.5;
   }
 
-  .highlight-emoji-list .emoji {
+  .highlight-emoji-list li .emoji {
     margin-top: 0.15rem;
   }
+
+  /* ---------- PERSPECTIVES ---------- */
+  .persp-flip-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .persp-flip-card-inner {
+    height: auto;
+    min-height: 420px;
+  }
+
+  .persp-flip-card-back {
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 260px;          /* o înălțime stabilă pe mobil */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* imaginea “Mindset” (text mare) - să nu se taie */
+  .gallery-item img[alt*="happy mind happy life"] {
+    object-fit: contain;
+    background: #fff;
+  }
+}
+
+/* TELEFOANE MICI <= 600px */
+@media (max-width: 600px) {
+  .gallery-item img {
+    height: 320px;          /* mai mare pe telefoane mici */
+  }
 }
 
 
-.about-flip-card-back,
-.persp-flip-card-back {
-  justify-content: flex-start;   /* în loc de center */
-  align-items: stretch;
-  padding-top: 1.6rem;           /* puțin spațiu sus */
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
 
-.gallery-item img[alt*="happy mind happy life"] {
-  object-fit: contain !important;
-  object-position: center !important;
-  background: #ffffff;           /* ca să nu arate ciudat când e contain */
-}
+
 
