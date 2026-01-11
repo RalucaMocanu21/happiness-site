@@ -1115,7 +1115,27 @@ a:focus {
     align-items: center;
     max-width: 100%;
     width: 100%;
+    padding: 0;
     gap: 2rem;
+  }
+
+   .hero-flat {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 3rem 1.2rem !important;
+    border-radius: 0 !important;
+
+    background: linear-gradient(
+      180deg,
+      #fff3c4 0%,
+      #ffe5f0 50%,
+      #e3eeff 100%
+    );
   }
 
   .hero-text {
