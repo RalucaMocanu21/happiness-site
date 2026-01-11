@@ -1286,6 +1286,16 @@ a:focus {
   text-align: center;
 }
 
+.highlight-emoji-list li {
+  white-space: normal !important;
+}
 
+.highlight-emoji-list li {
+  display: block;
+}
+
+.highlight-emoji-list li * {
+  display: inline;
+}
 
 
