@@ -369,6 +369,7 @@ a:focus {
   border-radius: 0 !important;
 }
 
+
 .hero-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -1104,7 +1105,7 @@ a:focus {
 }
 
 @media (max-width: 768px) {
-   .hero-flat {
+  .hero-flat {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1147,3 +1148,4 @@ a:focus {
     object-position: center; 
   }
 }
+
