@@ -1113,12 +1113,11 @@ a:focus {
    ========================= */
 @media (max-width: 768px) {
 
-  /* PREVINE overflow orizontal */
+
   html, body {
     overflow-x: hidden;
   }
 
-  /* ---------- HERO ---------- */
   .hero-flat {
     padding-left: 0;
     padding-right: 0;
@@ -1148,9 +1147,9 @@ a:focus {
     height: auto;
   }
 
-  /* ---------- ABOUT FLIP CARDS (cele 2 mari) ---------- */
+
   .about-flip-card-inner {
-    height: auto;               /* important pe mobil */
+    height: auto;              
     min-height: 360px;
   }
 
@@ -1159,7 +1158,7 @@ a:focus {
     padding: 1.25rem;
   }
 
-  /* back side să înceapă de sus, nu centrat */
+
   .about-flip-card-back {
     justify-content: flex-start;
     align-items: flex-start;
@@ -1205,7 +1204,7 @@ a:focus {
     margin-top: 0.15rem;
   }
 
-  /* ---------- PERSPECTIVES ---------- */
+
   .persp-flip-grid {
     display: flex;
     flex-direction: column;
@@ -1224,7 +1223,7 @@ a:focus {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* ---------- GALLERY ---------- */
+
   .gallery-grid {
     grid-template-columns: 1fr;
     gap: 1.6rem;
@@ -1237,27 +1236,40 @@ a:focus {
 
   .gallery-item img {
     width: 100%;
-    height: 260px;          /* o înălțime stabilă pe mobil */
+    height: 260px;        
     object-fit: cover;
     object-position: center;
     display: block;
   }
 
-  /* imaginea “Mindset” (text mare) - să nu se taie */
+
   .gallery-item img[alt*="happy mind happy life"] {
     object-fit: contain;
     background: #fff;
   }
 }
 
-/* TELEFOANE MICI <= 600px */
 @media (max-width: 600px) {
   .gallery-item img {
-    height: 320px;          /* mai mare pe telefoane mici */
+    height: 320px;          
   }
 }
 
+.highlight-long,
+.highlight-long * {
+  word-break: normal !important;
+  overflow-wrap: normal !important;  /* NU anywhere */
+  hyphens: none !important;
+}
 
+.highlight-emoji-list li {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.highlight-emoji-list li strong {
+  display: inline !important;
+}
 
 
 
